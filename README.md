@@ -33,6 +33,8 @@ docker rm jenkins-master
 docker build -t myjenkins .
 docker run -p 8080:8080 -p 50000:50000 --name=jenkins-master --mount source=jenkins-log,target=/var/log/jenkins --mount source=jenkins-data,target=/var/jenkins_home -d myjenkins
 
+docker exec jenkins-master cat /var/jenkins_home/secrets/initialAdminPassword
+
 ```
 
 Docker is smart enough to apply the read/write permissions of the target directories that have been assigned in Dockerfile when it mounts in the volume. 
