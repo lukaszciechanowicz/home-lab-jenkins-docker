@@ -1,4 +1,4 @@
-# home-lab-jenkins-docker
+# docker-home-lab-jenkins
 
 My home Lab dockerised Jenkins with data that persists.
 Just leaving notes here...
